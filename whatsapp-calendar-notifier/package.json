@@ -1,0 +1,28 @@
+{
+  "name": "whatsapp-calendar-notifier",
+  "version": "1.0.0",
+  "description": "Automatisation Google Calendar → WhatsApp : notifications de RDV dans un groupe WhatsApp",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "gcloud functions deploy calendarWebhook --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point calendarWebhook --source .",
+    "setup-watch": "node src/setup-watch.js"
+  },
+  "dependencies": {
+    "googleapis": "^128.0.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "google-calendar",
+    "whatsapp",
+    "notifications",
+    "webhook",
+    "cloud-functions"
+  ],
+  "author": "",
+  "license": "MIT"
+}
